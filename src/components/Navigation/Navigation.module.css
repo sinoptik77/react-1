@@ -1,0 +1,8 @@
+
+.navigation {
+  background-color: antiquewhite;
+  grid-area: n;
+}
+.item {
+  color: crimson;
+}
