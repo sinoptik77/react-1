@@ -1,22 +1,18 @@
 import s from './Navigation.module.css';
+import {NavLink} from "react-router-dom";
 
-const Navigation = () => {
+const NavItem = (props) => {
+    return <div>
+        <NavLink to={"" + props.linkId} className={(navData) => (navData.isActive ? s.active : s.item)}>{props.linkName}</NavLink>
+    </div>
+}
+const Navigation = (props) => {
     return <nav className={s.navigation}>
-        <div>
-            <a href='my-profile' className={s.item}>Profile</a>
-        </div>
-        <div>
-            <a href='my-messages' className={s.item}>Messages</a>
-        </div>
-        <div>
-            <a href='news' className={s.item}>News</a>
-        </div>
-        <div>
-            <a href='my-music' className={s.item}>Music</a>
-        </div>
-        <div>
-            <a href='settings' className={s.item}>Settings</a>
-        </div>
+        <NavItem linkId="/profile" linkName="Profile"/>
+        <NavItem linkId="/dialogs" linkName="Dialogs"/>
+        <NavItem linkId="/news" linkName="News"/>
+        <NavItem linkId="/music" linkName="Music"/>
+        <NavItem linkId="/settings" linkName="Settings"/>
     </nav>
 }
 export default Navigation;

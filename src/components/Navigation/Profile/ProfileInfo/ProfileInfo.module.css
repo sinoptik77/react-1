@@ -1,0 +1,17 @@
+.profileItem img {
+    max-width: 100%;
+}
+.ava img {
+    width: 50px;
+    border-radius: 30px;
+}
+.profileInfo {
+    display: flex;
+    padding: 10px;
+}
+.description {
+    padding-left: 15px;
+    flex-wrap: wrap;
+    width: 250px;
+    font-style: italic;
+}

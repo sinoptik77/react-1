@@ -5,4 +5,11 @@
 }
 .item {
   color: crimson;
+  text-decoration: none;
+  font-style: italic;
+}
+.active {
+  color: darkgoldenrod;
+  text-decoration: none;
+  font-style: italic;
 }

@@ -1,5 +1,7 @@
 .item {
   color: darkgoldenrod;
+  padding: 10px;
+  font-style: italic;
 }
 .item img {
   width: 50px;
