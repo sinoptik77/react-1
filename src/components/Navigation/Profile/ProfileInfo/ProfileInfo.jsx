@@ -10,7 +10,7 @@ const ProfileInfo = (props) => {
                 <img src='https://mena.org.ua/wp-content/uploads/2014/03/avatar.png'/>
             </div>
             <div className={s.description}>
-                Hi, my name is Illya and i love JS. Follow and pm me!
+                {props.description}
             </div>
         </div>
     </div>
