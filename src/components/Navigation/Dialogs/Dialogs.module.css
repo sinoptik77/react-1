@@ -1,3 +1,22 @@
+.item {
+    color: #0295DB;
+    text-decoration: none;
+}
+.active {
+    color: #E8D460;
+    text-decoration: none;
+}
 .dialogs {
+    display: flex;
+    padding: 10px;
+    color: #FFFFFF;
+}
+.dialogItem {
     font-style: italic;
+    padding: 10px;
+}
+.messageItem {
+    font-style: italic;
+    padding: 10px;
+    margin-left: 30px;
 }

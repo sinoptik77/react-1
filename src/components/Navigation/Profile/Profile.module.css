@@ -1,6 +1,7 @@
 .content {
-  background-color: burlywood;
+  background-color: #FFFFFF;
   grid-area: c;
+  color: #2165D5;
 }
 .content img {
   width: 1000px;

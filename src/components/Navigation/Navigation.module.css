@@ -1,15 +1,16 @@
 
 .navigation {
-  background-color: antiquewhite;
+  background-color: #0295DB;
   grid-area: n;
+  padding: 15px;
 }
 .item {
-  color: crimson;
+  color: #0B0E1B;
   text-decoration: none;
   font-style: italic;
 }
 .active {
-  color: darkgoldenrod;
+  color: #E8D460;
   text-decoration: none;
   font-style: italic;
 }
