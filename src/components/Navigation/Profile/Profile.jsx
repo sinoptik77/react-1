@@ -8,7 +8,7 @@ const Profile = (props) => {
     let descriptionElements = props.description.map(d => <ProfileInfo description={d.description}/>)
     return <div className={s.content}>
         {descriptionElements}
-        <NewPost/>
+        <NewPost addPost={props.addPost}/>
         {postElements}
     </div>
 }
