@@ -1,7 +1,7 @@
 import s from './Dialogs.module.css';
 import {NavLink} from "react-router-dom";
 import React from "react";
-import {addMessageActionCreator,messageOnChangeActionCreator} from "../../../redux/state";
+import {addMessageActionCreator,messageOnChangeActionCreator} from "../../../redux/dialogsReducer";
 
 const Dialogs = (props) => {
     let newMessageElement = React.createRef();

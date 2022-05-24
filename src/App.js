@@ -7,6 +7,7 @@ import Dialogs from "./components/Navigation/Dialogs/Dialogs";
 import News from "./components/Navigation/News/News";
 import Music from "./components/Navigation/Music/Music";
 import Settings from "./components/Navigation/Settings/Settings";
+import {memo} from "react";
 
 
 const App = (props) => {
@@ -38,4 +39,4 @@ const App = (props) => {
         </BrowserRouter>
     );
 }
-export default App;
+export default memo(App);
