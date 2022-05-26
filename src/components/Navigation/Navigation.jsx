@@ -12,7 +12,6 @@ const Navigation = (props) => {
         <NavItem linkId="/profile" linkName="Profile"/>
         <NavItem linkId="/dialogs" linkName="Dialogs"/>
         <NavItem linkId="/news" linkName="News"/>
-        <NavItem linkId="/music" linkName="Music"/>
         <NavItem linkId="/settings" linkName="Settings"/>
     </nav>
 }

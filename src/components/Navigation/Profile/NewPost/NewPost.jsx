@@ -1,23 +1,30 @@
 import s from "./NewPost.module.css";
 import React, {memo} from "react";
-import {addPostActionCreator,postOnChangeActionCreator} from "../../../../redux/profileReducer";
+import {addPostActionCreator, postOnChangeActionCreator} from "../../../../redux/profileReducer";
+import {useDispatch, useSelector} from "react-redux";
 
 
-const NewPost = (props) => {
+const NewPost = () => {
+
+    const dispatch = useDispatch()
+
+    const {newPostText} = useSelector(state => ({
+        newPostText: state.profileReducer.newPostText,
+    }))
 
     let addPost = () => {
-        props.dispatch(addPostActionCreator());
+        dispatch(addPostActionCreator());
     }
 
     let postOnChange = (event) => {
         let text = event.target.value;
         let action = postOnChangeActionCreator(text);
-        props.dispatch(action);
+        dispatch(action);
     }
 
     return <div className={s.newPost}>
         <div>My posts</div>
-        <textarea onChange={postOnChange} value={props.newPostText}/>
+        <textarea onChange={postOnChange} value={newPostText}/>
         <button onClick={addPost}>Add Post</button>
     </div>
 }

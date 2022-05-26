@@ -1,45 +1,42 @@
 import s from './Dialogs.module.css';
-import {NavLink} from "react-router-dom";
-import React from "react";
-import {addMessageActionCreator,messageOnChangeActionCreator} from "../../../redux/dialogsReducer";
+import React, {memo} from "react";
+import {addMessageActionCreator, messageOnChangeActionCreator} from "../../../redux/dialogsReducer";
+import {useDispatch, useSelector} from "react-redux";
+import MessageItem from "./DialogsMessages/DialogsMessages";
+import DialogItem from "./DialogsUsers/DialogsUsers";
 
 const Dialogs = (props) => {
-    let newMessageElement = React.createRef();
+    const {dialogItem, messageItem, newMessageText} = useSelector(state => ({
+        dialogItem: state.dialogsReducer.dialogItem,
+        messageItem: state.dialogsReducer.messageItem,
+        newMessageText: state.dialogsReducer.newMessageText
+    }))
+
+    const dispatch = useDispatch()
 
     let addMessage = () => {
-        props.dispatch(addMessageActionCreator());
+        dispatch(addMessageActionCreator());
     }
 
-    let messageOnChange = () => {
-        let text = newMessageElement.current.value;
+    let messageOnChange = (event) => {
+        let text = event.target.value;
         let action = messageOnChangeActionCreator(text);
-        props.dispatch(action);
+        dispatch(action);
     }
 
-    const DialogItem = (props) => {
-        return <div>
-            <NavLink to={'/dialogs/' + props.id}
-                     className={(dialog) => (dialog.isActive ? s.active : s.item)}>{props.name}</NavLink>
-        </div>
-    }
+    let dialogsElements = dialogItem.map(d => <DialogItem key={d.id} id={d.id} name={d.name}/>);
+    let messagesElements = messageItem.map(m => <MessageItem key={m.id} message={m.message}/>)
 
-    const MessageItem = (props) => {
-        return <div className={s.item}>
-            <div>{props.message}</div>
-        </div>
-    }
-    let dialogsElements = props.dialogItem.map(d => <DialogItem id={d.id} name={d.name}/>);
-    let messagesElements = props.messageItem.map(m => <MessageItem message={m.message}/>)
     return <div className={s.dialogs}>
         <div className={s.dialogItem}>
             {dialogsElements}
         </div>
         <div className={s.messageItem}>
             {messagesElements}
-            <textarea onChange={messageOnChange} ref={newMessageElement} value={props.newMessageText}/>
+            <textarea onChange={messageOnChange} value={newMessageText}/>
             <button onClick={addMessage}>Add Message</button>
         </div>
     </div>
 }
 
-export default Dialogs;
+export default memo(Dialogs);

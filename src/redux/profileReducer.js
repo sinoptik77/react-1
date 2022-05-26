@@ -4,7 +4,7 @@ const POST_ON_CHANGE = 'UPDATE-NEW-POST-TEXT';
 export const addPostActionCreator = () => ({type: ADD_POST})
 export const postOnChangeActionCreator = (text) => ({type: POST_ON_CHANGE, newText: text})
 
-let initialState =  {
+let initialState = {
     post: [
         {message: 'Hi, it\'s my first post!', likeCount: '12'},
         {message: 'What a wonderful world', likeCount: '21'}
@@ -22,12 +22,17 @@ const profileReducer = (state = initialState, action) => {
                 message: state.newPostText,
                 likeCount: '0',
             }
-            state.post.push(newPost);
-            state.newPostText = '';
-            return state
+            const newPosts = [...state.post, newPost]
+            return {
+                ...state,
+                newPostText: "",
+                post: newPosts
+            }
         case POST_ON_CHANGE:
-            state.newPostText = action.newText;
-            return state
+            return {
+                ...state,
+                newPostText: action.newText
+            }
         default:
             return state
     }
