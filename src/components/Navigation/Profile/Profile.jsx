@@ -10,7 +10,7 @@ const Profile = (props) => {
         description: state.profileReducer.description
     }))
 
-    let postElements = post.map(p => <Post key={p.id} message={p.message} likeCount={p.likeCount}/>)
+    let postElements = post.map((p, index) => <Post key={index} index={index} message={p.message} likeCount={p.likeCount}/>)
     let descriptionElements = description.map(d => <ProfileInfo key={d.id} description={d.description}/>)
 
     return <div className={s.content}>

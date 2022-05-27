@@ -8,3 +8,26 @@
   height: 50px;
   border-radius: 30px;
 }
+.like {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+.likeButton {
+  margin-left: 3px;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  transition: all ease-in-out 0.15s;
+}
+.likeButtonActive {
+  fill: red;
+}
+.likeButton:active {
+  margin-left: 3px;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+}
