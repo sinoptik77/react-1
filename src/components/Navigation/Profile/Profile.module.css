@@ -1,7 +1,6 @@
 .content {
-  background-color: #FFFFFF;
   grid-area: c;
-  color: #2165D5;
+  color: black;
 }
 .content img {
   width: 1000px;

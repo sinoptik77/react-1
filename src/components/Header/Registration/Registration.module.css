@@ -1,0 +1,292 @@
+.containerLogin {
+    background-image: url("/src/images/background-login.jpg");
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.containerLogin::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: -webkit-linear-gradient(left, rgba(0, 168, 255, 0.5), rgba(185, 0, 255, 0.5));
+    pointer-events: none;
+}
+
+.logBar {
+    width: 390px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    -webkit-box-shadow: 0 3px 20px 0 rgb(0 0 0 / 10%);
+    padding: 80px 55px 30px;
+    display: block;
+    box-sizing: border-box;
+}
+
+.logForm {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: block;
+}
+
+.logFormTitle {
+    font-family: SourceSansPro-Bold, sans-serif;
+    display: block;
+    font-weight: bold;
+    font-size: 30px;
+    color: #4b2354;
+    line-height: 1.2;
+    text-align: center;
+    padding-bottom: 37px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.divInput {
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    padding: 0;
+    box-sizing: border-box;
+    display: block;
+}
+
+/*.alertValidate::before {
+    content: attr(data-validate);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    min-height: 62px;
+    background-color: #fff;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    padding: 0 45px 0 22px;
+    pointer-events: none;
+    box-sizing: inherit;
+    font-size: 16px;
+    color: #fa4251;
+    line-height: 1.2;
+}*/
+.input {
+    font-family: SourceSansPro-Bold, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #4b2354;
+    line-height: 1.2;
+    display: block;
+    width: 100%;
+    height: 62px;
+    background: 0 0;
+    padding: 0 20px 0 23px;
+    outline: none;
+    border: none;
+    overflow: visible;
+    margin: 0;
+    touch-action: manipulation;
+    box-sizing: border-box;
+    writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0;
+    text-shadow: none;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+}
+
+.focusInput {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    border-radius: 20px;
+    -webkit-box-shadow: 0 5px 30px 0 rgb(0 0 0 / 10%);
+    transition: all .4s;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.containerButton {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.signButton {
+    font-family: SourceSansPro-Bold, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 160px;
+    height: 50px;
+    background-color: #bd59d4;
+    border-radius: 25px;
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.2;
+    text-transform: uppercase;
+    transition: all .4s;
+    -webkit-box-shadow: 0 10px 30px 0 rgb(189 89 212 / 50%);
+    -webkit-appearance: button;
+    overflow: visible;
+    touch-action: manipulation;
+    box-sizing: border-box;
+    writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-indent: 0;
+    text-shadow: none;
+    text-align: center;
+    cursor: default;
+    outline: none !important;
+    border: none;
+}
+
+.signButton:hover {
+    background-color: #4b2354;
+    -webkit-box-shadow: 0 10px 30px 0 rgb(189 89 212 / 80%);
+    cursor: pointer;
+    outline: none !important;
+    border: none;
+}
+
+/*
+.hideValidate {
+    font-family: Material-Design-Iconic-Font, serif;
+    font-size: 15px;
+    color: #fa4251;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 62px;
+    top: 0;
+    right: 23px;
+}*/
+.textCenter {
+    padding-bottom: 20px;
+    padding-top: 57px;
+    text-align: center !important;
+    margin: 0;
+    box-sizing: border-box;
+    display: block;
+}
+
+.textCenter2 {
+    padding: 0;
+    text-align: center !important;
+    margin: 0;
+    box-sizing: border-box;
+    display: block;
+}
+
+.text1 {
+    font-family: SourceSansPro-Regular, sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #999;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.signUp {
+    font-family: SourceSansPro-Regular, sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #4b2354;
+    -webkit-transition: all .4s;
+    margin: 0;
+    touch-action: manipulation;
+    text-decoration: none;
+    background-color: transparent;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.socialClub {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 112px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.socialItem {
+    font-size: 25px;
+    color: #3b5998;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 5px;
+    -webkit-box-shadow: 0 5px 20px 0 rgb(0 0 0 / 10%);
+    font-family: SourceSansPro-Regular, sans-serif;
+    line-height: 1.7;
+    -webkit-transition: all .4s;
+    touch-action: manipulation;
+    text-decoration: none;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.socialItem img {
+    width: 26px;
+    vertical-align: middle;
+    border-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.socialItem:hover {
+    -webkit-box-shadow: 0 5px 20px 0 rgb(0 0 0 / 20%);
+    cursor: pointer;
+    outline: none !important;
+    border: none;
+}

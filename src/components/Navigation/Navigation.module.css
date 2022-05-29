@@ -1,8 +1,9 @@
 
 .navigation {
-  background-color: #0295DB;
+  z-index: 2;
   grid-area: n;
   padding: 15px;
+
 }
 .item {
   color: #0B0E1B;

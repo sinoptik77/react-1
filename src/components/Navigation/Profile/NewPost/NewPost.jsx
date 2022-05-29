@@ -25,7 +25,7 @@ const NewPost = () => {
     return <div className={s.newPost}>
         <div>My posts</div>
         <textarea onChange={postOnChange} value={newPostText}/>
-        <button onClick={addPost}>Add Post</button>
+        <button className={s.button} onClick={addPost}>Add Post</button>
     </div>
 }
 

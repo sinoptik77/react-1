@@ -3,14 +3,18 @@ import reportWebVitals from './reportWebVitals';
 import store from './redux/reduxStore'
 import App from "./App";
 import {Provider} from 'react-redux'
-import { createRoot } from 'react-dom/client';
+import {createRoot} from 'react-dom/client';
+import {BrowserRouter} from "react-router-dom";
+import './index.css'
 
 const container = document.getElementById('root');
 const root = createRoot(container); // createRoot(container!)
 root.render(
-    <Provider store={store}>
-        <App/>
-    </Provider>
+    <BrowserRouter>
+        <Provider store={store}>
+            <App/>
+        </Provider>
+    </BrowserRouter>
 )
 
 

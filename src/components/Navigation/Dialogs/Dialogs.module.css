@@ -1,5 +1,5 @@
 .item {
-    color: #0295DB;
+    color: black;
     text-decoration: none;
 }
 .active {
@@ -19,4 +19,7 @@
     font-style: italic;
     padding: 10px;
     margin-left: 30px;
+}
+.button {
+    cursor: pointer;
 }

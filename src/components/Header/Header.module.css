@@ -1,7 +1,22 @@
 .header {
   grid-area: h;
   background-color: #E04148;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 15px;
+  z-index: 2;
 }
 .header img {
   width: 50px;
+}
+.item {
+  color: #0B0E1B;
+  text-decoration: none;
+  font-style: italic;
+}
+.active {
+  color: #E8D460;
+  text-decoration: none;
+  font-style: italic;
 }
