@@ -4,6 +4,8 @@
 .ava img {
     width: 50px;
     border-radius: 30px;
+    border: 1px solid black;
+    -webkit-box-shadow: 0 10px 10px 0 rgb(37 34 38 / 50%);
 }
 .profileInfo {
     display: flex;
@@ -13,6 +15,12 @@
     padding-left: 15px;
     flex-wrap: wrap;
     width: 250px;
-    font-style: italic;
-    color: black;
+    font-family: 'Tiro Gurmukhi', serif;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #4b2354;
+    -webkit-transition: all .4s;
+    touch-action: manipulation;
+    text-decoration: none;
+    background-color: transparent;
 }

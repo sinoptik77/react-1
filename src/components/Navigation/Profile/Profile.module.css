@@ -1,6 +1,9 @@
 .content {
   grid-area: c;
   color: black;
+  height: calc(100vh - 70px);
+  overflow: auto;
+  padding-left: 10px;
 }
 .content img {
   width: 1000px;

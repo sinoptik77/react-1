@@ -1,8 +1,10 @@
 const MESSAGE_ON_CHANGE = 'MESSAGE-ON-CHANGE';
 const ADD_MESSAGE = 'ADD-MESSAGE';
+const STATE_FROM_LOCAL_STORAGE = 'STATE-FROM-LOCAL-STORAGE';
 
 export const messageOnChangeActionCreator = (text) => ({type: MESSAGE_ON_CHANGE, newText: text})
 export const addMessageActionCreator = () => ({type: ADD_MESSAGE})
+export const setStateFromLocalStorage = (state) => ({type: STATE_FROM_LOCAL_STORAGE, state})
 
 let initialState = {
     dialogItem: [
@@ -21,6 +23,8 @@ let initialState = {
 }
 
 const dialogsReducer = (state = initialState, action) => {
+    console.log('action', action)
+    console.log('state', state)
     switch (action.type) {
         case ADD_MESSAGE:
             let newMessage = {
@@ -36,6 +40,10 @@ const dialogsReducer = (state = initialState, action) => {
             return {
                 ...state,
                 newMessageText: action.newText
+            }
+        case STATE_FROM_LOCAL_STORAGE:
+            return {
+                ...action.state
             }
         default:
             return state

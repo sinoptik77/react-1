@@ -8,9 +8,11 @@ import News from "./components/Navigation/News/News";
 import Settings from "./components/Navigation/Settings/Settings";
 import Registration from "./components/Header/Registration/Registration";
 import DialogPeoples from "./components/Navigation/Dialogs/DialogPeoples/DialogPeoples";
+import {useLocalStorage} from "./useLocalStorage";
 
 
 const App = (props) => {
+    //useLocalStorage()
     let match = useMatch("/registration");
     return (
         <div className={!match && 'app-wrapper'}>

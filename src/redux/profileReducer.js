@@ -11,7 +11,7 @@ let initialState = {
         {message: 'Hi, it\'s my first post!', likeCount: true},
         {message: 'What a wonderful world', likeCount: false}
     ],
-    newPostText: 'Text',
+    newPostText: '',
     description: [
         {description: 'Hi, my name is Illya and i love JS. Follow and pm me!'}
     ],
@@ -29,15 +29,19 @@ const profileReducer = (state = initialState, action) => {
                 post: addLikes
             }
         case ADD_POST:
-            let newPost = {
-                message: state.newPostText,
-                likeCount: false,
-            }
-            const newPosts = [...state.post, newPost]
-            return {
-                ...state,
-                newPostText: "",
-                post: newPosts
+            if (state.newPostText === '') {
+                break
+            } else {
+                let newPost = {
+                    message: state.newPostText,
+                    likeCount: false,
+                }
+                const newPosts = [...state.post, newPost]
+                return {
+                    ...state,
+                    newPostText: "",
+                    post: newPosts
+                }
             }
         case POST_ON_CHANGE:
             return {

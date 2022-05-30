@@ -1,8 +1,73 @@
 .newPost {
     padding: 10px;
-    font-style: italic;
-    color: black;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
 }
 .button {
+    font-family: 'Tiro Gurmukhi', serif;
+    font-weight: lighter;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 120px;
+    height: 40px;
+    background-color: #bd59d4;
+    border-radius: 25px;
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.2;
+    text-transform: uppercase;
+    transition: all .4s;
+    -webkit-box-shadow: 0 10px 10px 0 rgb(189 89 212 / 50%);
+    -webkit-appearance: button;
+    overflow: visible;
+    touch-action: manipulation;
+
+    writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-indent: 0;
+    text-shadow: none;
+    text-align: center;
+    cursor: default;
+    outline: none !important;
+    border: none;
+}
+.button:hover {
+    background-color: #4b2354;
+    -webkit-box-shadow: 0 10px 10px 0 rgb(189 89 212 / 80%);
     cursor: pointer;
+    outline: none !important;
+    border: none;
+}
+.text {
+    font-family: 'Tiro Gurmukhi', serif;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #4b2354;
+    background-color: transparent;
+    padding-bottom: 5px;
+    font-weight: bold;
+}
+.textArea {
+    padding-bottom: 7px;
+}
+.textAreaStyle {
+    border-radius: 5px;
+    outline: none;
+    -moz-appearance: none;
+    border: 1px solid #999;
+    white-space: normal;
+    width: 200px;
+    max-width: 400px;
+    min-width: 200px;
+    height: 100px;
+    min-height: 100px;
+    max-height: 200px;
+    overflow: hidden;
+    -webkit-box-shadow: 0 5px 20px 0 rgb(0 0 0 / 30%);
+    transition: all .4s;
 }

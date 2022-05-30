@@ -1,17 +1,42 @@
 
 .navigation {
+  background: lightblue;
+  border-radius: 40px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 3px 20px 0 rgb(0 0 0 / 10%);
   z-index: 2;
   grid-area: n;
-  padding: 15px;
-
+  padding: 10px;
+  margin: 5px;
 }
 .item {
-  color: #0B0E1B;
+  font-family: 'Tiro Gurmukhi', serif;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #4b2354;
+  -webkit-transition: all .4s;
+  touch-action: manipulation;
   text-decoration: none;
-  font-style: italic;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: bold;
 }
 .active {
-  color: #E8D460;
+  padding: 20px;
+  color: #bd59d4;
   text-decoration: none;
-  font-style: italic;
+  font-family: 'Tiro Gurmukhi', serif;
+  font-size: 16px;
+  line-height: 1.4;
+  -webkit-transition: all .4s;
+  touch-action: manipulation;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: bold;
+}
+.nav {
+  padding-top: 3px;
+  -webkit-box-shadow: 0 2px 2px 0 rgb(37 34 38 / 50%);
+  border-radius: 15px;
 }

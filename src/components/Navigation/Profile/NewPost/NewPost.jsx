@@ -23,8 +23,10 @@ const NewPost = () => {
     }
 
     return <div className={s.newPost}>
-        <div>My posts</div>
-        <textarea onChange={postOnChange} value={newPostText}/>
+        <div className={s.text}>My posts</div>
+        <div className={s.textArea}>
+            <textarea className={s.textAreaStyle} onChange={postOnChange} value={newPostText} placeholder='New post'/>
+        </div>
         <button className={s.button} onClick={addPost}>Add Post</button>
     </div>
 }
