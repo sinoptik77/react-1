@@ -15,17 +15,14 @@ export const setStateProfileFromLS = (state) => ({
 });
 
 let initialState = {
-  post: [
-    { message: "Hi, it's my first post!", likeCount: true },
-    { message: "What a wonderful world", likeCount: false },
-  ],
+  post: [],
   newPostText: "",
   description: [
     { description: "Hi, my name is Illya and i love JS. Follow and pm me!" },
   ],
 };
 
-const profileReducer = (state = {}, action) => {
+const profileReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_LIKE:
       const addLikes = [...state.post];

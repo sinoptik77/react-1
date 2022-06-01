@@ -8,9 +8,10 @@ const useLocalStorage = () => {
   const state = useSelector((state) => state);
   useEffect(() => {
     const localState = localStorage.getItem("state");
-    console.log("localState", JSON.parse(localState));
-    dispatch(setStateDialogsFromLS(JSON.parse(localState)?.dialogsReducer));
-    dispatch(setStateProfileFromLS(JSON.parse(localState)?.profileReducer));
+    if (localState) {
+      dispatch(setStateDialogsFromLS(JSON.parse(localState)?.dialogsReducer));
+      dispatch(setStateProfileFromLS(JSON.parse(localState)?.profileReducer));
+    }
   }, []);
 
   useEffect(() => {

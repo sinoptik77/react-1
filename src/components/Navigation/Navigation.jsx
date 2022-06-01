@@ -13,9 +13,9 @@ const Navigation = (props) => {
         <div className={s.nav}>
             <NavItem linkId="/profile" linkName="Profile"/>
         </div>
-        <div className={s.nav}>
-            <NavItem linkId="/dialogs" linkName="Dialogs"/>
-        </div>
+        {/*<div className={s.nav}>*/}
+        {/*    <NavItem linkId="/dialogs" linkName="Dialogs"/>*/}
+        {/*</div>*/}
         <div className={s.nav}>
             <NavItem linkId="/news" linkName="News"/>
         </div>

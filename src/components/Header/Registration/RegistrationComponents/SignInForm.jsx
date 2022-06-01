@@ -3,7 +3,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import ErrorIcon from "../../../../images/icons/error.png";
 
-const RegForm = () => {
+const SignInForm = () => {
   const {
     register,
     handleSubmit,
@@ -73,4 +73,4 @@ const RegForm = () => {
   );
 };
 
-export default RegForm;
+export default SignInForm;

@@ -9,29 +9,23 @@ import Settings from "./components/Navigation/Settings/Settings";
 import Registration from "./components/Header/Registration/Registration";
 import DialogPeoples from "./components/Navigation/Dialogs/DialogPeoples/DialogPeoples";
 import { useLocalStorage } from "./useLocalStorage";
+import { MainLayout } from "./components/layouts/MainLayout/MainLayout";
 
 const App = (props) => {
-  useLocalStorage()
-  let match = useMatch("/signin");
+  useLocalStorage();
   return (
-    <div className={!match && "app-wrapper"}>
-      {!match && (
-        <>
-          <Header />
-          <Navigation />
-        </>
-      )}
-      <div className="app-content">
-        <Routes>
-          <Route path="/profile" element={<Profile />} />
-          {/*<Route path="/dialogs" element={<Dialogs />} />*/}
-          {/*<Route path="/dialogs/:id" element={<DialogPeoples />} />*/}
-          <Route path="/news" element={<News />} />
-          <Route path="/settings" element={<Settings />} />
-          <Route path="/signin" element={<Registration />} />
-        </Routes>
-      </div>
-    </div>
+    <Routes>
+      <Route path="/" element={<Registration />} />
+      <Route element={<MainLayout />}>
+        <Route path="/profile" element={<Profile />} />
+        {/*<Route path="/dialogs" element={<Dialogs />} />*/}
+        {/*<Route path="/dialogs/:id" element={<DialogPeoples />} />*/}
+        <Route path="/news" element={<News />} />
+        <Route path="/settings" element={<Settings />} />
+      </Route>
+      <Route path="/signin" element={<Registration />} />
+      <Route path="/signup" element={<Registration />} />
+    </Routes>
   );
 };
 export default App;
