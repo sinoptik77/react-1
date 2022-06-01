@@ -13,13 +13,13 @@ const NewPost = () => {
     newPostText: state.profileReducer.newPostText,
   }));
 
-  let addPost = () => {
+  const addPost = () => {
     dispatch(addPostActionCreator());
   };
 
-  let postOnChange = (event) => {
-    let text = event.target.value;
-    let action = postOnChangeActionCreator(text);
+  const postOnChange = (event) => {
+    const text = event.target.value;
+    const action = postOnChangeActionCreator(text);
     dispatch(action);
   };
 

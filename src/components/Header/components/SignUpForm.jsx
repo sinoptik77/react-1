@@ -3,10 +3,10 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import ErrorIcon from "../../../images/icons/error.png";
 import { useDispatch } from "react-redux";
+import { registration } from "../../../redux/usersReducer";
 import { useNavigate } from "react-router-dom";
-import { login } from "../../../redux/usersReducer";
 
-const SignInForm = () => {
+const SignUpForm = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const {
@@ -14,13 +14,14 @@ const SignInForm = () => {
     handleSubmit,
     formState: { errors },
   } = useForm({ mode: "onBlur" });
+
   const onSubmit = (data) => {
-    dispatch(login(data));
-    navigate("/profile");
+    dispatch(registration(data));
+    navigate("/signin");
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} novalidate>
+    <form onSubmit={handleSubmit(onSubmit)}>
       <div className={s.divInput}>
         <input
           className={s.input}
@@ -42,6 +43,25 @@ const SignInForm = () => {
           <>
             <img className={s.errorIcon} src={ErrorIcon} />
             <p>{errors?.email?.message || "Error!"}</p>
+          </>
+        )}
+      </div>
+      <div className={s.divInput}>
+        <input
+          className={s.input}
+          type="text"
+          placeholder="Username"
+          {...register("username", {
+            required: "required field!",
+          })}
+        />
+        <span className={s.focusInput} />
+      </div>
+      <div className={s.errorBox}>
+        {errors?.username && (
+          <>
+            <img className={s.errorIcon} src={ErrorIcon} />
+            <p>{errors?.username?.message || "Error!"}</p>
           </>
         )}
       </div>
@@ -74,11 +94,11 @@ const SignInForm = () => {
       </div>
       <div className={s.containerButton}>
         <button type="submit" className={s.signButton}>
-          Sign in
+          Sign up
         </button>
       </div>
     </form>
   );
 };
 
-export default SignInForm;
+export default SignUpForm;
