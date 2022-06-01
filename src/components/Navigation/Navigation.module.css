@@ -8,9 +8,10 @@
   grid-area: n;
   padding: 10px;
   margin: 5px;
+  min-width: 120px;
 }
 .item {
-  font-family: 'Tiro Gurmukhi', serif;
+  font-family: 'Montserrat', sans-serif;
   padding: 10px;
   font-size: 16px;
   line-height: 1.4;
@@ -26,7 +27,7 @@
   padding: 20px;
   color: #bd59d4;
   text-decoration: none;
-  font-family: 'Tiro Gurmukhi', serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   line-height: 1.4;
   -webkit-transition: all .4s;

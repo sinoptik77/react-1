@@ -11,7 +11,7 @@ const Header = () => {
     return <header className={s.header}>
         <img src='https://upload.wikimedia.org/wikipedia/commons/d/db/Zeronet_logo.png'/>
         <div>
-            <NavItem linkId="/registration" linkName="Registration"/>
+            <NavItem linkId="/signin" linkName="Sign in"/>
         </div>
     </header>
 }

@@ -23,8 +23,8 @@ let initialState = {
 }
 
 const dialogsReducer = (state = initialState, action) => {
-    console.log('action', action)
-    console.log('state', state)
+/*    console.log('action', action)
+    console.log('state', state)*/
     switch (action.type) {
         case ADD_MESSAGE:
             let newMessage = {

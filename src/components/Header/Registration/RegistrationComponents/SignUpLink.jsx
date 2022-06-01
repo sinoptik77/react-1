@@ -4,7 +4,7 @@ import {NavLink} from "react-router-dom";
 
 const SignUpLink = () => {
     return <div className={s.textCenter2}>
-        <NavLink to='/profile' className={s.signUp}>
+        <NavLink to='/signup' className={s.signUp}>
             Sign up
         </NavLink>
     </div>

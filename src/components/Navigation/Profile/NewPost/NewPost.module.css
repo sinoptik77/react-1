@@ -5,7 +5,7 @@
     flex-direction: column;
 }
 .button {
-    font-family: 'Tiro Gurmukhi', serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: lighter;
     display: flex;
     justify-content: center;
@@ -44,7 +44,7 @@
     border: none;
 }
 .text {
-    font-family: 'Tiro Gurmukhi', serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     line-height: 1.4;
     color: #4b2354;
