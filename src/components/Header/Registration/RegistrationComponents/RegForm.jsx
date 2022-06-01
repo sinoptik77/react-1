@@ -1,7 +1,7 @@
 import s from "../Registration.module.css";
 import React from "react";
 import { useForm } from "react-hook-form";
-import { NavLink } from "react-router-dom";
+import ErrorIcon from "../../../../images/icons/error.png";
 
 const RegForm = () => {
   const {
@@ -13,22 +13,37 @@ const RegForm = () => {
   console.log(errors);
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={handleSubmit(onSubmit)} novalidate>
       <div className={s.divInput}>
         <input
           className={s.input}
           type="email"
           placeholder="Email"
-          {...register("Email", { required: true, pattern: /^\S+@\S+$/i })}
+          {...register("email", {
+            required: "Invalid email",
+            pattern: {
+              value:
+                /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i,
+              message: "Invalid email",
+            },
+          })}
         />
-        <span className={s.focusInput}></span>
+        <span className={s.focusInput} />
+      </div>
+      <div className={s.errorBox}>
+        {errors?.email && (
+          <>
+            <img className={s.errorIcon} src={ErrorIcon} />
+            <p>{errors?.email?.message || "Error!"}</p>
+          </>
+        )}
       </div>
       <div className={s.divInput}>
         <input
           className={s.inputPassword}
           type="password"
           placeholder="Password"
-          {...register("Password", {
+          {...register("password", {
             required: "required field!",
             minLength: {
               value: 6,
@@ -40,10 +55,15 @@ const RegForm = () => {
             },
           })}
         />
-        <span className={s.focusInput}></span>
+        <span className={s.focusInput} />
       </div>
-      <div style={{ height: 30 }}>
-        {errors?.password && <p>{errors?.password?.message || "Error!"}</p>}
+      <div className={s.errorBox}>
+        {errors?.password && (
+          <>
+            <img className={s.errorIcon} src={ErrorIcon} />
+            <p>{errors?.password?.message || "Error!"}</p>
+          </>
+        )}
       </div>
       <div className={s.containerButton}>
         <button type="submit" className={s.signButton}>

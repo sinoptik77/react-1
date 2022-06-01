@@ -1,211 +1,229 @@
 .containerLogin {
-    background-image: url("/src/images/background-login.jpg");
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    z-index: 1;
+  background-image: url("/src/images/background-login.jpg");
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
 }
 
 .containerLogin::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    background: -webkit-linear-gradient(left, rgba(0, 168, 255, 0.5), rgba(185, 0, 255, 0.5));
-    pointer-events: none;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(
+    left,
+    rgba(0, 168, 255, 0.5),
+    rgba(185, 0, 255, 0.5)
+  );
+  pointer-events: none;
 }
 
 .logBar {
-    width: 390px;
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    -webkit-box-shadow: 0 3px 20px 0 rgb(0 0 0 / 10%);
-    padding: 80px 55px 30px;
+  width: 390px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 3px 20px 0 rgb(0 0 0 / 10%);
+  padding: 80px 55px 30px;
 }
 
 .logFormTitle {
-    font-family: 'Montserrat', sans-serif;
-    display: block;
-    font-weight: bold;
-    font-size: 30px;
-    color: #4b2354;
-    line-height: 1.2;
-    text-align: center;
-    padding-bottom: 37px;
+  font-family: "Montserrat", sans-serif;
+  display: block;
+  font-weight: bold;
+  font-size: 30px;
+  color: #4b2354;
+  line-height: 1.2;
+  text-align: center;
+  padding-bottom: 37px;
 }
 
 .divInput {
-    width: 100%;
-    position: relative;
-    background-color: #fff;
-    border-radius: 20px;
-    margin-bottom: 20px;
+  width: 100%;
+  position: relative;
+  background-color: #fff;
+  border-radius: 20px;
 }
 
 .input {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    color: #4b2354;
-    line-height: 1.2;
-    width: 100%;
-    height: 62px;
-    padding: 0 20px 0 23px;
-    outline: none;
-    border: none;
-    overflow: visible;
-    touch-action: manipulation;
-    writing-mode: horizontal-tb !important;
-    text-rendering: auto;
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-transform: none;
-    text-indent: 0;
-    text-shadow: none;
-    text-align: start;
-    appearance: auto;
-    -webkit-rtl-ordering: logical;
-    cursor: text;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #4b2354;
+  line-height: 1.2;
+  width: 100%;
+  height: 62px;
+  padding: 0 20px 0 23px;
+  outline: none;
+  border: none;
+  overflow: visible;
+  touch-action: manipulation;
+  writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-align: start;
+  appearance: auto;
+  -webkit-rtl-ordering: logical;
+  cursor: text;
 }
 
 .inputPassword {
-    composes: input;
-    -webkit-text-security: disc !important;
+  composes: input;
+  -webkit-text-security: disc !important;
 }
 
 .focusInput {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    border-radius: 20px;
-    -webkit-box-shadow: 0 5px 30px 0 rgb(0 0 0 / 10%);
-    transition: all .4s;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 5px 30px 0 rgb(0 0 0 / 10%);
+  transition: all 0.4s;
 }
 
 .containerButton {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .signButton {
-    font-family: 'Montserrat', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 20px;
-    min-width: 160px;
-    height: 50px;
-    background-color: #bd59d4;
-    border-radius: 25px;
-    font-size: 14px;
-    color: #fff;
-    line-height: 1.2;
-    text-transform: uppercase;
-    transition: all .4s;
-    -webkit-box-shadow: 0 10px 30px 0 rgb(189 89 212 / 50%);
-    -webkit-appearance: button;
-    overflow: visible;
-    touch-action: manipulation;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  min-width: 160px;
+  height: 50px;
+  background-color: #bd59d4;
+  border-radius: 25px;
+  font-size: 14px;
+  color: #fff;
+  line-height: 1.2;
+  text-transform: uppercase;
+  transition: all 0.4s;
+  -webkit-box-shadow: 0 10px 30px 0 rgb(189 89 212 / 50%);
+  -webkit-appearance: button;
+  overflow: visible;
+  touch-action: manipulation;
 
-    writing-mode: horizontal-tb !important;
-    text-rendering: auto;
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-indent: 0;
-    text-shadow: none;
-    text-align: center;
-    cursor: default;
-    outline: none !important;
-    border: none;
+  writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-indent: 0;
+  text-shadow: none;
+  text-align: center;
+  cursor: default;
+  outline: none !important;
+  border: none;
 }
 
 .signButton:hover {
-    background-color: #4b2354;
-    -webkit-box-shadow: 0 10px 30px 0 rgb(189 89 212 / 80%);
-    cursor: pointer;
-    outline: none !important;
-    border: none;
+  background-color: #4b2354;
+  -webkit-box-shadow: 0 10px 30px 0 rgb(189 89 212 / 80%);
+  cursor: pointer;
+  outline: none !important;
+  border: none;
 }
 
 .textCenter {
-    padding-bottom: 20px;
-    padding-top: 57px;
-    text-align: center !important;
+  padding-bottom: 20px;
+  padding-top: 57px;
+  text-align: center !important;
 }
 
 .textCenter2 {
-    text-align: center !important;
+  text-align: center !important;
 }
 
 .text1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    line-height: 1.4;
-    color: #999;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #999;
 }
 
 .signUp {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    line-height: 1.4;
-    color: #4b2354;
-    -webkit-transition: all .4s;
-    touch-action: manipulation;
-    text-decoration: none;
-    background-color: transparent;
-    cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #4b2354;
+  -webkit-transition: all 0.4s;
+  touch-action: manipulation;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .socialClub {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 112px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 112px;
 }
 
 .socialItem {
-    font-size: 25px;
-    color: #3b5998;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #fff;
-    margin: 5px;
-    -webkit-box-shadow: 0 5px 20px 0 rgb(0 0 0 / 10%);
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.7;
-    -webkit-transition: all .4s;
-    touch-action: manipulation;
-    text-decoration: none;
-    cursor: pointer;
+  font-size: 25px;
+  color: #3b5998;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 5px;
+  -webkit-box-shadow: 0 5px 20px 0 rgb(0 0 0 / 10%);
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.7;
+  -webkit-transition: all 0.4s;
+  touch-action: manipulation;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .socialItem img {
-    width: 26px;
-    vertical-align: middle;
-    border-style: none;
+  width: 26px;
+  vertical-align: middle;
+  border-style: none;
 }
 
 .socialItem:hover {
-    -webkit-box-shadow: 0 5px 20px 0 rgb(0 0 0 / 20%);
-    cursor: pointer;
-    outline: none !important;
-    border: none;
+  -webkit-box-shadow: 0 5px 20px 0 rgb(0 0 0 / 20%);
+  cursor: pointer;
+  outline: none !important;
+  border: none;
+}
+
+.errorBox {
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  margin-bottom: 20px;
+}
+
+.errorIcon {
+  margin-right: 8px;
+  width: 20px;
+  height: 20px;
 }
