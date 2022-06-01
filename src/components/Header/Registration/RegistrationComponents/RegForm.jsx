@@ -10,7 +10,6 @@ const RegForm = () => {
     formState: { errors },
   } = useForm({ mode: "onBlur" });
   const onSubmit = (data) => console.log(data);
-  console.log(errors);
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} novalidate>

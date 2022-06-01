@@ -11,7 +11,7 @@ import DialogPeoples from "./components/Navigation/Dialogs/DialogPeoples/DialogP
 import { useLocalStorage } from "./useLocalStorage";
 
 const App = (props) => {
-  //useLocalStorage()
+  useLocalStorage()
   let match = useMatch("/signin");
   return (
     <div className={!match && "app-wrapper"}>
@@ -24,8 +24,8 @@ const App = (props) => {
       <div className="app-content">
         <Routes>
           <Route path="/profile" element={<Profile />} />
-          <Route path="/dialogs" element={<Dialogs />} />
-          <Route path="/dialogs/:id" element={<DialogPeoples />} />
+          {/*<Route path="/dialogs" element={<Dialogs />} />*/}
+          {/*<Route path="/dialogs/:id" element={<DialogPeoples />} />*/}
           <Route path="/news" element={<News />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/signin" element={<Registration />} />
