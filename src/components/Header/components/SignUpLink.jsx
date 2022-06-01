@@ -1,4 +1,4 @@
-import s from "../Registration.module.css";
+import s from "../../layouts/AuthLayout/AuthLayout.module.css";
 import {NavLink} from "react-router-dom";
 
 

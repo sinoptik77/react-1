@@ -1,7 +1,7 @@
-import s from "../Registration.module.css";
+import s from "../../layouts/AuthLayout/AuthLayout.module.css";
 import React from "react";
 import { useForm } from "react-hook-form";
-import ErrorIcon from "../../../../images/icons/error.png";
+import ErrorIcon from "../../../images/icons/error.png";
 
 const SignInForm = () => {
   const {
