@@ -1,5 +1,5 @@
 const ADD_USER = "ADD-USER";
-const STATE_FROM_LOCAL_STORAGE = "STATE-FROM-LOCAL-STORAGE";
+const STATE_FROM_LOCAL_STORAGE_USERS = "STATE-FROM-LOCAL-STORAGE-USERS";
 const LOGIN = "LOGIN";
 
 export const login = (user) => ({
@@ -11,7 +11,7 @@ export const registration = (user) => ({
   user: user,
 });
 export const setStateUsersFromLS = (state) => ({
-  type: STATE_FROM_LOCAL_STORAGE,
+  type: STATE_FROM_LOCAL_STORAGE_USERS,
   state,
 });
 
@@ -30,7 +30,7 @@ const usersReducer = (state = initialState, action) => {
   switch (action.type) {
     case LOGIN: {
       const userDB = state.users.filter(
-        (item) => action.user.email === item.email
+        (item) => action.user.email === item.email && action.user.password === item.password
       )[0];
       if (userDB) {
         return {
@@ -48,7 +48,7 @@ const usersReducer = (state = initialState, action) => {
         ...state,
         users: [...state.users, action.user],
       };
-    case STATE_FROM_LOCAL_STORAGE:
+    case STATE_FROM_LOCAL_STORAGE_USERS:
       return {
         ...action.state,
       };

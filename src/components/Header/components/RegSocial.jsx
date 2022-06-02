@@ -1,8 +1,8 @@
 import s from "../../layouts/AuthLayout/AuthLayout.module.css";
+import clsx from "clsx";
 
-
-const RegSocial = () => {
-    return <div className={s.socialClub}>
+const RegSocial = ({containerClassName}) => {
+    return <div className={clsx(s.socialClub, containerClassName)}>
         <a className={s.socialItem}>
             <img src='https://umi.ru/images/blog/icon14-min.jpg'/>
         </a>

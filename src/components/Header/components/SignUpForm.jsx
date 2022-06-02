@@ -53,6 +53,14 @@ const SignUpForm = () => {
           placeholder="Username"
           {...register("username", {
             required: "required field!",
+            minLength: {
+              value: 6,
+              message: "less than 6 characters",
+            },
+            maxLength: {
+              value: 12,
+              message: "more than 12 characters",
+            },
           })}
         />
         <span className={s.focusInput} />

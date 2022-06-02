@@ -17,7 +17,10 @@ const useLocalStorage = () => {
   }, []);
 
   useEffect(() => {
-    localStorage.setItem("state", JSON.stringify(state));
+    window.onunload = function () {
+      console.log(state);
+      localStorage.setItem("state", JSON.stringify(state));
+    };
   }, [state]);
 };
 

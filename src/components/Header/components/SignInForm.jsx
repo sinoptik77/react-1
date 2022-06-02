@@ -20,7 +20,7 @@ const SignInForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} novalidate>
+    <form onSubmit={handleSubmit(onSubmit)} noValidate>
       <div className={s.divInput}>
         <input
           className={s.input}

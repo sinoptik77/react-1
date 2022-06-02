@@ -1,7 +1,7 @@
 import s from "../../layouts/AuthLayout/AuthLayout.module.css";
 import RegText from "../components/RegText";
 import RegSocial from "../components/RegSocial";
-import SignUpLink from "../components/SignUpLink";
+import SignLink from "../components/SignLink";
 import SignInForm from "../components/SignInForm";
 
 const SignIn = () => {
@@ -11,7 +11,7 @@ const SignIn = () => {
       <SignInForm />
       <RegText />
       <RegSocial />
-      <SignUpLink />
+      <SignLink link='/signup' text='Sign up'/>
     </>
   );
 };

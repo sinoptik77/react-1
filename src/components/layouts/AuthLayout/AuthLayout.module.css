@@ -177,7 +177,11 @@
 .socialClub {
   display: flex;
   justify-content: center;
-  padding-bottom: 112px;
+  padding-bottom: 102px;
+}
+
+.socialClubSignUp {
+  padding-bottom: 10px;
 }
 
 .socialItem {
@@ -214,16 +218,16 @@
 }
 
 .errorBox {
-  height: 30px;
+  height: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: red;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .errorIcon {
   margin-right: 8px;
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
 }

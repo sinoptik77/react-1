@@ -1,7 +1,7 @@
 const ADD_POST = "ADD-POST";
 const POST_ON_CHANGE = "UPDATE-NEW-POST-TEXT";
 const ADD_LIKE = "ADD-LIKE";
-const STATE_FROM_LOCAL_STORAGE = "STATE-FROM-LOCAL-STORAGE";
+const STATE_FROM_LOCAL_STORAGE_PROFILE = "STATE-FROM-LOCAL-STORAGE-PROFILE";
 
 export const addPostActionCreator = () => ({ type: ADD_POST });
 export const postOnChangeActionCreator = (text) => ({
@@ -10,7 +10,7 @@ export const postOnChangeActionCreator = (text) => ({
 });
 export const addLikeActionCreator = (index) => ({ type: ADD_LIKE, id: index });
 export const setStateProfileFromLS = (state) => ({
-  type: STATE_FROM_LOCAL_STORAGE,
+  type: STATE_FROM_LOCAL_STORAGE_PROFILE,
   state,
 });
 
@@ -51,7 +51,7 @@ const profileReducer = (state = initialState, action) => {
         ...state,
         newPostText: action.newText,
       };
-    case STATE_FROM_LOCAL_STORAGE:
+    case STATE_FROM_LOCAL_STORAGE_PROFILE:
       return {
         ...action.state,
       };

@@ -1,6 +1,6 @@
 const MESSAGE_ON_CHANGE = "MESSAGE-ON-CHANGE";
 const ADD_MESSAGE = "ADD-MESSAGE";
-const STATE_FROM_LOCAL_STORAGE = "STATE-FROM-LOCAL-STORAGE";
+const STATE_FROM_LOCAL_STORAGE_DIALOGS = "STATE-FROM-LOCAL-STORAGE-DIALOGS";
 
 export const messageOnChangeActionCreator = (text) => ({
   type: MESSAGE_ON_CHANGE,
@@ -8,7 +8,7 @@ export const messageOnChangeActionCreator = (text) => ({
 });
 export const addMessageActionCreator = () => ({ type: ADD_MESSAGE });
 export const setStateDialogsFromLS = (state) => ({
-  type: STATE_FROM_LOCAL_STORAGE,
+  type: STATE_FROM_LOCAL_STORAGE_DIALOGS,
   state,
 });
 
@@ -47,7 +47,7 @@ const dialogsReducer = (state = initialState, action) => {
         ...state,
         newMessageText: action.newText,
       };
-    case STATE_FROM_LOCAL_STORAGE:
+    case STATE_FROM_LOCAL_STORAGE_DIALOGS:
       return {
         ...action.state,
       };
