@@ -1,16 +1,19 @@
 .profileItem img {
     width: 100%;
 }
+
 .ava img {
     width: 50px;
     border-radius: 30px;
     border: 1px solid black;
     -webkit-box-shadow: 0 10px 10px 0 rgb(37 34 38 / 50%);
 }
+
 .profileInfo {
     display: flex;
     padding: 10px;
 }
+
 .description {
     padding-left: 15px;
     flex-wrap: wrap;
@@ -23,4 +26,15 @@
     touch-action: manipulation;
     text-decoration: none;
     background-color: transparent;
+}
+
+.ava {
+    display: flex;
+    flex-direction: column
+}
+
+.avaD {
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 15px;
 }

@@ -1,41 +1,66 @@
 .item {
-  padding: 10px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
-  line-height: 1.4;
-  color: #4b2354;
-  -webkit-transition: all .4s;
-  touch-action: manipulation;
-  text-decoration: none;
-  background-color: transparent;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #4b2354;
+    -webkit-transition: all .4s;
+    touch-action: manipulation;
+    text-decoration: none;
+    background-color: transparent;
 }
+
 .item img {
-  width: 50px;
-  height: 50px;
-  border-radius: 30px;
-  border: 1px solid black;
-  -webkit-box-shadow: 0 10px 10px 0 rgb(37 34 38 / 50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    border: 1px solid black;
+    -webkit-box-shadow: 0 10px 10px 0 rgb(37 34 38 / 50%);
 }
+
 .like {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 20px;
-  height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
 }
+
 .likeButton {
-  margin-left: 3px;
-  width: 15px;
-  height: 15px;
-  cursor: pointer;
-  transition: all ease-in-out 0.15s;
+    margin-left: 3px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    transition: all ease-in-out 0.15s;
 }
+
 .likeButtonActive {
-  fill: red;
+    fill: red;
 }
+
 .likeButton:active {
-  margin-left: 3px;
-  width: 10px;
-  height: 10px;
-  cursor: pointer;
+    margin-left: 3px;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+}
+
+.deleteButton {
+    width: 23px;
+    height: 23px;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    background-color: transparent;
+}
+
+.deleteButtonImage {
+    width: 20px;
+    height: 20px;
+}
+
+.deleteButtonImage:active {
+
 }

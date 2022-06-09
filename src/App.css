@@ -33,3 +33,12 @@
 .app-content {
   z-index: 2;
 }
+.page {
+  position: absolute;
+}
+.page-enter-active {
+  animation: fade-in 1s forwards;
+}
+.page-exit-active {
+  animation: fade-out 1s forwards;
+}
